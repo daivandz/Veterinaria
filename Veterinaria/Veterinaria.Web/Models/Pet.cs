@@ -34,6 +34,7 @@ namespace Veterinaria.Web.Models
         [Required]
         [Display(Name = "Altura")]
         public decimal Height { get; set; }
+        public string ImgUrl { get; set; }
         [Display(Name = "Dueño")]
         public string Owner { get; set; }
         public ICollection<Consult> Consults { get; set; }

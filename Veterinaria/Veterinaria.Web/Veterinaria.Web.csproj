@@ -189,6 +189,10 @@
     <Compile Include="Migrations\202005231928450_StructDb.Designer.cs">
       <DependentUpon>202005231928450_StructDb.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202005232229146_UpdateSets.cs" />
+    <Compile Include="Migrations\202005232229146_UpdateSets.Designer.cs">
+      <DependentUpon>202005232229146_UpdateSets.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Consult.cs" />
@@ -209,6 +213,7 @@
     <Content Include="Content\bootstrap-reboot.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\img\dogscats.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
@@ -403,6 +408,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202005231928450_StructDb.resx">
       <DependentUpon>202005231928450_StructDb.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202005232229146_UpdateSets.resx">
+      <DependentUpon>202005232229146_UpdateSets.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

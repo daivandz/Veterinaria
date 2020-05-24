@@ -4,24 +4,30 @@
     ViewBag.Title = "Create";
 }
 
-<h2>Create</h2>
+    <div class="row justify-content-center m-3">
+        <div class="col-md-10">
+            <div class="card mb-4">
+                <div class="card-header py-2 bg-dark">
+                    <h6 class="text-white">Nuevo dueño</h6>
+                </div>
+                <div class="card-body">
+                    @using (Html.BeginForm())
+                    {
+                        @Html.AntiForgeryToken()
 
-@using (Html.BeginForm()) 
-{
-    @Html.AntiForgeryToken()
-    
-    <div class="form-horizontal">
-        <h4>Owner</h4>
-        <hr />
-        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-        <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Create" class="btn btn-default" />
+                        <div class="form-horizontal">
+                            <h4>Owner</h4>
+                            <hr />
+                            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                            <div class="form-group">
+                                <div class="col-md-offset-2 col-md-10">
+                                    <input type="submit" value="Agregar" class="btn btn-default" />
+                                    <a href="@Url.Action("Index","Owners")" class="text-danger">Cancelar</a>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
             </div>
         </div>
     </div>
-}
-
-<div>
-    @Html.ActionLink("Back to List", "Index")
-</div>
