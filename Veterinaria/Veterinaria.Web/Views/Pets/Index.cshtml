@@ -48,7 +48,7 @@
                 <h6 class="text-center">Nueva Mascota</h6>
             </div>
             <div class="modal-body">
-                <form action="@Url.Action("Create","Pets")" method="post">
+                <form action="@Url.Action("Create","Pets")" method="post" enctype="multipart/form-data">
                     @Html.AntiForgeryToken()
                     <div class="row justify-content-between">
                         <div class="col-md-6">
@@ -93,7 +93,7 @@
                             <div class="form-group">
                                 <label class="col-md-2">Color</label>
                                 <div class="col-md-10">
-                                    <input type="text" name="Colo" value="" placeholder="Escriba el color de su mascota" class="form-control" />
+                                    <input type="text" name="Color" value="" placeholder="Escriba el color de su mascota" class="form-control" />
                                 </div>
                             </div>
                         </div>
@@ -129,7 +129,7 @@
                     <div class="form-group">
                         Fotografia
                         <div class="col-md-10">
-                            <input type="file" name="hpb" value="" class="form-control" />
+                            <input type="file" name="hpb" value="" class="form-control-file" />
                         </div>
                     </div>
 

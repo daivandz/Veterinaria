@@ -49,6 +49,5 @@ namespace Veterinaria.Web.Models
         public DbSet<Veterinary> Veterinaries { get; set; }
         public DbSet<History> Histories { get; set; }
         public DbSet<Manager> Managers { get; set; }
-
     }
 }

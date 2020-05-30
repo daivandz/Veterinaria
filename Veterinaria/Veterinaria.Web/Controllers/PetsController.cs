@@ -61,12 +61,16 @@ namespace Veterinaria.Web.Controllers
         {
             if (ModelState.IsValid)
             {
+                string nombreArchivo = System.IO.Path.GetFileName(hpb.FileName);
+                string filePath = "~/Content/img/perfil/" + pet.Name + "_" + nombreArchivo;
+                hpb.SaveAs(Server.MapPath(filePath));
                 //Solo funciona si esta autenticado un Cliente
                 var userId = User.Identity.GetUserId();
                 //Funciona para traer al usuario de la base de datos
                 var own = db.Owners.Where(o => o.UserId == userId).FirstOrDefault();
                 //Agregamos el Id del Owner que buscamos
                 pet.OwnerId = own.id;
+                pet.ImgUrl = pet.Name + "_" + nombreArchivo;
                 db.Pets.Add(pet);
                 db.SaveChanges();
                 return RedirectToAction("Index");
